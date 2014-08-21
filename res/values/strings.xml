@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">霊界電話</string>
+    <string name="admob_id">ca-app-pub-4623298212622664/3911393437</string>
+    <string name="developer_email">mrp1q7z@gmail.com</string>
+    <string name="action_settings">設定</string>
+    <string name="sound_on">オン</string>
+    <string name="sound_off">OFF</string>
+    <string name="now_setting">現在値：</string>
+    <string name="title_activity_exit">ExitActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

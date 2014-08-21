@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="設定画面" >
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="Sound"
+        android:summary="携帯の開閉時に音を出します"
+        android:title="開閉時の音" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="ReqMessage"
+        android:summary="サーバーから新しいメッセージを取得します"
+        android:title="新しいメッセージの取得" />
+
+    <ListPreference
+        android:defaultValue="10"
+        android:dependency="ReqMessage"
+        android:dialogTitle="メッセージの取得件数"
+        android:entries="@array/req_count_key"
+        android:entryValues="@array/req_count_val"
+        android:key="ReqCount"
+        android:summary="サーバーから新しいメッセージを取得する件数を指定します"
+        android:title="メッセージの取得件数" />
+
+    <EditTextPreference
+        android:dialogTitle="端末のメッセージ件数"
+        android:key="LocalMessageCount"
+        android:summary="現在端末に保存されているメッセージの件数です"
+        android:title="端末のメッセージ件数" />
+
+    <PreferenceCategory android:title="このアプリについて" >
+        <com.yojiokisoft.reikaidenwaclient.activity.VersionDialogPreference
+            android:dialogMessage=""
+            android:dialogTitle="バージョン"
+            android:key="Version"
+            android:summary="@string/app_name"
+            android:title="バージョン" />
+
+        <ListPreference
+            android:dialogTitle="お問い合わせ"
+            android:entries="@array/inquiry_key"
+            android:entryValues="@array/inquiry_val"
+            android:key="Inquiry"
+            android:summary="ご意見、ご質問、苦情など、お気軽にお問い合わせください"
+            android:title="お問い合わせ" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
